@@ -1,0 +1,125 @@
+﻿<!doctype html>
+
+<!--
+***********  PROJECT:          altcoinCheck
+***********  FILENAME:         "index.html"
+***********  LANGUAGE:         html5
+***********  AUTHOR:           Stephen Casica
+***********  DESCRIPTION:      displays web page
+-->
+
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+<title>AltCoin Check</title>
+
+<script>
+     /**
+     * This script will set the 'initial-scale' value on the viewport metatag
+     * The scale is used to fit the template on Kindle Fire mobile devices
+     * This must be handled in the head of the document because the scale
+     * is not affected once the page finishes loading
+     */
+     var vp = document.getElementById('viewport');
+
+     var initialScale = Math.max(screen.width, screen.height) / 1920;
+
+     vp.setAttribute('content', 'width=device-width, initial-scale=' + initialScale + ', maximum-scale=' + initialScale, + 'minimum-scale=' + initialScale);
+
+</script>
+
+<link href="css/altcoin.css" rel="stylesheet" type="text/css">
+
+<script src="js/retrieveAPI.js"> </script>
+     
+
+</head>
+<body>
+<!-- Main Container -->
+<div class="container"> 
+  <!-- App Name Section -->
+  <section class="name" id="name">
+       <h2 class="name_header"> <img src="assets/logo.png" /></h2class="name_header">
+    <h2 class="name_header">ALT<span class="dark">COIN </span>CHECK</h2>
+    <p class="tagline">Current Cryptocurrency Exchange Rates</p>
+  </section>
+
+ 
+
+  <!-- Currency Gallery -->
+  <div class="gallery">
+     <div class="currency">
+          <img src="assets/bitcoin.png" />
+          <h3>bitcoin</h3>
+          <p>(bcn)</p>
+          <h2 id="btc"> </h2>
+     </div>
+
+     <div class="currency">
+          <img src="assets/bitcoin-cash.png" />
+          <h3>ethereum </h3>
+          <p>(eth)</p>
+          <h2 id="eth"> </h2>
+     </div>
+
+     <div class="currency">
+          <img src="assets/ethereum.png" />
+          <h3>bitcoin cash</h3>
+          <p>(btc)</p>
+          <h2 id="bch"> </h2>
+     </div>
+
+     <div class="currency">
+          <img src="assets/ripple.png" />
+          <h3>Ripple</h3>
+          <p>(xrp)</p>
+          <h2 id="xrp"> </h2>
+     </div>
+
+     <div class="currency">
+          <img src="assets/litecoin.png" />
+          <h3>Litecoin</h3>
+          <p>(ltc)</p>
+          <h2 id="ltc"> </h2>
+     </div>
+
+     <div class="currency">
+          <img src="assets/dash.png" />
+          <h3>dash</h3>
+          <p>(dash)</p>
+          <h2 id="dash"> </h2>
+     </div>
+     <div class="currency">
+          <img src="assets/monero.png" />
+          <h3>monero</h3>
+          <p>(xmr)</p>
+          <h2 id="xmr"> </h2>
+     </div>
+
+     <div class="currency">
+          <img src="assets/ethereum-classic.png" />
+          <h3>Ethereum classic</h3>
+          <p>(etc)</p>
+          <h2 id="etc"> </h2>
+     </div>
+
+     <div class="currency">
+          <img src="assets/stellar.png" />
+          <h3>Stellar Lumens</h3>
+          <p>(xlm)</p>
+          <h2 id="xlm"> </h2>
+     </div>
+  </div>
+
+  <!-- Copyrights Section -->
+  <div class="copyright">COPYRIGHT&copy; 2017- <strong>stevecasica.com</strong></div>
+     
+</div>
+<!-- Main Container Ends -->
+
+</body>
+
+
+</html>
